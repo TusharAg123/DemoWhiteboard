@@ -5,7 +5,13 @@ import axios from "axios";
 export const CreateUser = () => {
   const [apiKey, setApiKey] = useState("");
   const [displayName, setDisplayName] = useState("");
+  //const [values, setValues] = useState([]);
+
   const history = useHistory();
+
+  /*useEffect(() => {
+    onCreateUserClicked();
+  });*/
 
   const onCreateUserClicked = async () => {
     try {
@@ -16,7 +22,7 @@ export const CreateUser = () => {
           displayName: displayName,
         }
       );
-      console.log(response);
+      console.log(response.data);
     } catch (error) {
       console.log(error.response.data);
     }
@@ -36,10 +42,13 @@ export const CreateUser = () => {
       <input
         value={displayName}
         onChange={(e) => setDisplayName(e.target.value)}
-        placeholder="string - the user’s displayed namee"
+        placeholder="string - the user’s displayed name"
       />
       <br />
       <button onClick={onCreateUserClicked}>Enter</button>
+      {/*{values.map((value) => {
+        return <pre>{JSON.stringify(value)}</pre>;
+      })}*/}
       <button onClick={() => history.push("/userActive")}>Active User</button>
       <button onClick={() => history.push("/home")}>Back</button>
     </div>

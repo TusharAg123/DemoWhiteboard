@@ -36,6 +36,7 @@ export const ActiveUser = () => {
         onChange={(e) => setUserId(e.target.value)}
         placeholder="Enter User Id"
       />
+      <br />
       <button onClick={onActiveUserClicked}>Enter</button>
       <button onClick={() => history.push("/userCreate")}>Create User</button>
       <button onClick={() => history.push("/home")}>Back</button>
