@@ -3,6 +3,8 @@ import { Home } from "./Pages/Home";
 import { CreateUser } from "./Pages/CreateUser";
 import { ActiveUser } from "./Pages/ActiveUser";
 import { CreateBoard } from "./Pages/CreateBoard";
+import { LimnuBoard } from "./Pages/LimnuBoard";
+
 import { BoardOptions } from "./Pages/WhiteboardOptions/BoardOptions";
 import { BoardActive } from "./Pages/WhiteboardOptions/BoardActive";
 import { BoardInfo } from "./Pages/WhiteboardOptions/BoardInfo";
@@ -29,6 +31,10 @@ export const Routes = () => {
         <Route path="/boardCreate">
           <CreateBoard />
         </Route>
+        <Route path="/limnuBoard">
+          <LimnuBoard />
+        </Route>
+
         <Route path="/boardOptions">
           <BoardOptions />
         </Route>

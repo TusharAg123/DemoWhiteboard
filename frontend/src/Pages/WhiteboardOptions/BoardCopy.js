@@ -36,64 +36,66 @@ export const BoardCopy = () => {
   };
 
   return (
-    <div className="content-container">
-      <h1>Board Copy</h1>
-      <hr />
-      <h5>apiKey</h5>
-      <input
-        value={apiKey}
-        onChange={(e) => setApiKey(e.target.value)}
-        placeholder="string - the private API key issued by Limnu"
-      />
-      <h5>boardId</h5>
-      <input
-        value={boardId}
-        onChange={(e) => setBoardId(e.target.value)}
-        placeholder="string - the id of the board to modify"
-      />
-      <h5>creator</h5>
-      <input
-        value={creator}
-        onChange={(e) => setCreator(e.target.value)}
-        placeholder="string - the id of the user to become the creator"
-      />
-      <h5>isLeading</h5>
-      <input
-        value={isLeading}
-        onChange={(e) => setIsLeading(e.target.value)}
-        placeholder="boolean"
-      />
-      <h5>soloDraw</h5>
-      <input
-        value={soloDraw}
-        onChange={(e) => setSoloDraw(e.target.value)}
-        placeholder="boolean - (optional))"
-      />
-      <h5>public</h5>
-      <input
-        value={publicc}
-        onChange={(e) => setPublicc(e.target.value)}
-        placeholder="boolean - (optional)"
-      />
-      <h5>type</h5>
-      <input
-        value={type}
-        onChange={(e) => setType(e.target.value)}
-        placeholder="(optional - Default: whiteboard)"
-      />
-      <h5>displayName</h5>
-      <input
-        value={displayName}
-        onChange={(e) => setDisplayName(e.target.value)}
-        placeholder="string - (optional) Sets the display name of the board"
-      />
-      <br />
-      <button onClick={onBoardCopyClicked}>Enter</button>
+    <div className="page-container">
+      <div className="content-container">
+        <h1>Board Copy</h1>
+        <hr />
+        <h5>apiKey</h5>
+        <input
+          value={apiKey}
+          onChange={(e) => setApiKey(e.target.value)}
+          placeholder="string - the private API key issued by Limnu"
+        />
+        <h5>boardId</h5>
+        <input
+          value={boardId}
+          onChange={(e) => setBoardId(e.target.value)}
+          placeholder="string - the id of the board to modify"
+        />
+        <h5>creator</h5>
+        <input
+          value={creator}
+          onChange={(e) => setCreator(e.target.value)}
+          placeholder="string - the id of the user to become the creator"
+        />
+        <h5>isLeading</h5>
+        <input
+          value={isLeading}
+          onChange={(e) => setIsLeading(e.target.value)}
+          placeholder="boolean"
+        />
+        <h5>soloDraw</h5>
+        <input
+          value={soloDraw}
+          onChange={(e) => setSoloDraw(e.target.value)}
+          placeholder="boolean - (optional))"
+        />
+        <h5>public</h5>
+        <input
+          value={publicc}
+          onChange={(e) => setPublicc(e.target.value)}
+          placeholder="boolean - (optional)"
+        />
+        <h5>type</h5>
+        <input
+          value={type}
+          onChange={(e) => setType(e.target.value)}
+          placeholder="(optional - Default: whiteboard)"
+        />
+        <h5>displayName</h5>
+        <input
+          value={displayName}
+          onChange={(e) => setDisplayName(e.target.value)}
+          placeholder="string - (optional) Sets the display name of the board"
+        />
+        <br />
+        <button onClick={onBoardCopyClicked}>Enter</button>
 
-      <button onClick={() => history.push("/boardOptions")}>
-        Board Options
-      </button>
-      <button onClick={() => history.push("/home")}>Back</button>
+        <button onClick={() => history.push("/boardOptions")}>
+          Board Options
+        </button>
+        <button onClick={() => history.push("/home")}>Back</button>
+      </div>
     </div>
   );
 };

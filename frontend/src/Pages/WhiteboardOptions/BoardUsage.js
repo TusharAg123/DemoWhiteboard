@@ -24,27 +24,29 @@ export const BoardUsage = () => {
   };
 
   return (
-    <div className="content-container">
-      <h1>Board Usage</h1>
-      <hr />
-      <h5>apiKey</h5>
-      <input
-        value={apiKey}
-        onChange={(e) => setApiKey(e.target.value)}
-        placeholder="string - the API key issued by Limnu"
-      />
-      <h5>boardId</h5>
-      <input
-        value={boardId}
-        onChange={(e) => setBoardId(e.target.value)}
-        placeholder="string - the id of the board to modify"
-      />
-      <br />
-      <button onClick={onBoardUsageClicked}>boardUsage</button>
-      <button onClick={() => history.push("/boardOptions")}>
-        More Board Options
-      </button>
-      <button onClick={() => history.push("/home")}>Back</button>
+    <div className="page-container">
+      <div className="content-container">
+        <h1>Board Usage</h1>
+        <hr />
+        <h5>apiKey</h5>
+        <input
+          value={apiKey}
+          onChange={(e) => setApiKey(e.target.value)}
+          placeholder="string - the API key issued by Limnu"
+        />
+        <h5>boardId</h5>
+        <input
+          value={boardId}
+          onChange={(e) => setBoardId(e.target.value)}
+          placeholder="string - the id of the board to modify"
+        />
+        <br />
+        <button onClick={onBoardUsageClicked}>boardUsage</button>
+        <button onClick={() => history.push("/boardOptions")}>
+          More Board Options
+        </button>
+        <button onClick={() => history.push("/home")}>Back</button>
+      </div>
     </div>
   );
 };

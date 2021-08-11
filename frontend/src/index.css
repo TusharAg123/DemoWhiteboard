@@ -56,18 +56,19 @@ button {
   padding: 32px;
 }
 
-.success {
-  background-color: #90ee90;
+.board-container {
+  background-color: white;
   border-radius: 8px;
-  margin-bottom: 8px;
-  padding: 16px;
-  text-align: center;
+  width: 150px;
+  height: 90vh;
+  padding: 32px;
 }
 
-.fail {
-  background-color: #ffcccb;
-  border-radius: 8px;
-  margin-bottom: 8px;
-  padding: 16px;
-  text-align: center;
+.column {
+  float: left;
+  width: 14%;
+  padding: 10px;
+  height: 850px; 
 }
+
+

@@ -26,33 +26,35 @@ export const BoardDelete = () => {
   };
 
   return (
-    <div className="content-container">
-      <h1>Board Delete</h1>
-      <hr />
-      <h5>apiKey</h5>
-      <input
-        value={apiKey}
-        onChange={(e) => setApiKey(e.target.value)}
-        placeholder="string - the private API key issued by Limnu"
-      />
-      <h5>boardId</h5>
-      <input
-        value={boardId}
-        onChange={(e) => setBoardId(e.target.value)}
-        placeholder="string - the id of the board you wish to delete"
-      />
-      <h5>redirectUrl</h5>
-      <input
-        value={redirectUrl}
-        onChange={(e) => setRedirectUrl(e.target.value)}
-        placeholder="string - (Optional)"
-      />
-      <br />
-      <button onClick={onBoardDeleteClicked}>Enter</button>
-      <button onClick={() => history.push("/boardOptions")}>
-        Board Options
-      </button>
-      <button onClick={() => history.push("/home")}>Back</button>
+    <div className="page-container">
+      <div className="content-container">
+        <h1>Board Delete</h1>
+        <hr />
+        <h5>apiKey</h5>
+        <input
+          value={apiKey}
+          onChange={(e) => setApiKey(e.target.value)}
+          placeholder="string - the private API key issued by Limnu"
+        />
+        <h5>boardId</h5>
+        <input
+          value={boardId}
+          onChange={(e) => setBoardId(e.target.value)}
+          placeholder="string - the id of the board you wish to delete"
+        />
+        <h5>redirectUrl</h5>
+        <input
+          value={redirectUrl}
+          onChange={(e) => setRedirectUrl(e.target.value)}
+          placeholder="string - (Optional)"
+        />
+        <br />
+        <button onClick={onBoardDeleteClicked}>Enter</button>
+        <button onClick={() => history.push("/boardOptions")}>
+          Board Options
+        </button>
+        <button onClick={() => history.push("/home")}>Back</button>
+      </div>
     </div>
   );
 };

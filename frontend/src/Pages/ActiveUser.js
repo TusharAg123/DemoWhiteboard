@@ -23,23 +23,25 @@ export const ActiveUser = () => {
   };
 
   return (
-    <div className="content-container">
-      <h1>Active User</h1>
-      <hr />
-      <input
-        value={apiKey}
-        onChange={(e) => setApiKey(e.target.value)}
-        placeholder="Enter api key"
-      />
-      <input
-        value={userId}
-        onChange={(e) => setUserId(e.target.value)}
-        placeholder="Enter User Id"
-      />
-      <br />
-      <button onClick={onActiveUserClicked}>Enter</button>
-      <button onClick={() => history.push("/userCreate")}>Create User</button>
-      <button onClick={() => history.push("/home")}>Back</button>
+    <div className="page-container">
+      <div className="content-container">
+        <h1>Active User</h1>
+        <hr />
+        <input
+          value={apiKey}
+          onChange={(e) => setApiKey(e.target.value)}
+          placeholder="Enter api key"
+        />
+        <input
+          value={userId}
+          onChange={(e) => setUserId(e.target.value)}
+          placeholder="Enter User Id"
+        />
+        <br />
+        <button onClick={onActiveUserClicked}>Enter</button>
+        <button onClick={() => history.push("/userCreate")}>Create User</button>
+        <button onClick={() => history.push("/home")}>Back</button>
+      </div>
     </div>
   );
 };
